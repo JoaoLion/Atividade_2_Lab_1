@@ -1,0 +1,11 @@
+1 - Exposição do estado do sistema: Qualquer parte do programa poderia alterar temp_c, temp_f ou alarme, causando resultados imprevisíveis, além de todas as partes do código dependem diretamente dessas variáveis, dificultando manutenção ou reutilização.
+
+2 - Refatoração do Estado: O estado do sistema passa a existir somente dentro do main, eliminando completamente as variáveis globais.
+
+3 - Modularização, separação entre:
+
+Função pura (cálculo) que apenas recebe valores e retorna resultado.
+
+Procedimento (alteração de estado) que altera valores via referência.
+
+4-Defesa Arquitetural: As variáveis deixam de ser globais e passam a existir apenas dentro do main. Isso protege o estado do sistema contra modificações externas inesperadas.
